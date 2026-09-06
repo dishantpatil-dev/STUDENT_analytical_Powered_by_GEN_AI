@@ -1,0 +1,407 @@
+/* ---------- RESET ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:
+radial-gradient(circle at top right,#143c6b 0%,transparent 35%),
+radial-gradient(circle at bottom left,#0b3b45 0%,transparent 35%),
+#0f172a;
+overflow-x:hidden;
+color:#fff;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar{
+height:70px;
+background:#111827;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* ---------- SIDEBAR ---------- */
+
+.sidebar{
+position:fixed;
+top:70px;
+left:0;
+width:250px;
+height:100%;
+background:#111827;
+padding:25px;
+}
+
+.logo{
+font-size:42px;
+font-weight:bold;
+color:#00d4ff;
+text-align:center;
+margin-bottom:35px;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar ul li{
+margin:12px 0;
+}
+
+.sidebar ul li a{
+display:flex;
+align-items:center;
+gap:12px;
+padding:14px 18px;
+border-radius:12px;
+text-decoration:none;
+color:#cbd5e1;
+transition:.35s;
+}
+
+.sidebar ul li a:hover{
+background:#1f2937;
+color:#00d4ff;
+padding-left:28px;
+}
+
+/* ---------- CONTENT ---------- */
+
+.main-content{
+margin-left:250px;
+padding:95px 30px;
+}
+
+/* ---------- CARD ---------- */
+
+.card{
+position:relative;
+background:#1e293b;
+border:2px solid rgba(255,255,255,.05);
+border-radius:22px;
+color:#fff;
+overflow:hidden;
+transition:.35s ease;
+}
+
+.card::before{
+content:"";
+position:absolute;
+width:260px;
+height:260px;
+background:linear-gradient(
+90deg,
+transparent,
+#00d4ff,
+transparent
+);
+top:-120px;
+left:-240px;
+transform:rotate(25deg);
+filter:blur(10px);
+opacity:0;
+transition:.8s;
+}
+
+.card:hover::before{
+left:120%;
+opacity:1;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#00d4ff;
+box-shadow:
+0 0 12px rgba(0,212,255,.45),
+0 0 30px rgba(0,212,255,.25),
+0 20px 45px rgba(0,0,0,.45);
+}
+
+/* ---------- PREMIUM DASHBOARD CARDS ---------- */
+
+.stat-card{
+
+position:relative;
+min-height:150px;
+padding:28px;
+
+border-radius:22px;
+
+overflow:hidden;
+
+background:#20293c;
+
+cursor:pointer;
+
+transition:.4s;
+
+z-index:1;
+.stat-card h2{
+    font-size:3rem;
+    font-weight:700;
+}
+
+}
+
+.stat-card::before{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#00d4ff,
+transparent
+);
+
+top:-90px;
+
+left:-180px;
+
+transform:rotate(25deg);
+
+transition:.7s;
+
+filter:blur(10px);
+
+opacity:0;
+
+}
+
+.stat-card:hover::before{
+
+left:120%;
+
+opacity:1;
+
+}
+
+.stat-card::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:22px;
+
+padding:2px;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,.05),
+rgba(255,255,255,0)
+);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+pointer-events:none;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-10px) scale(1.02);
+
+box-shadow:
+
+0 0 18px rgba(0,212,255,.25),
+
+0 0 40px rgba(0,212,255,.20),
+
+0 25px 45px rgba(0,0,0,.45);
+
+}
+
+.card-icon{
+
+font-size:42;
+
+transition:.4s;
+
+}
+
+.stat-card:hover .card-icon{
+
+transform:scale(1.15);
+
+}
+
+/* ---------- COLORS ---------- */
+
+.total-card{
+
+border-left:4px solid #00d4ff;
+
+}
+
+.attendance-card{
+
+border-left:4px solid #22c55e;
+
+}
+
+.marks-card{
+
+border-left:4px solid #f59e0b;
+
+}
+
+.teacher-card{
+
+border-left:4px solid #3b82f6;
+
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn{
+
+border-radius:10px;
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* ---------- TABLE ---------- */
+
+table{
+
+color:#fff!important;
+
+}
+
+/* ---------- CHART ---------- */
+canvas{
+padding:10px;
+transition:.4s;
+}
+
+canvas:hover{
+transform:scale(1.02);
+}
+.progress-circle{
+position:relative;
+width:130px;
+height:130px;
+}
+
+.progress-circle svg{
+transform:rotate(0deg);
+}
+
+.progress-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:26px;
+font-weight:bold;
+color:#00d4ff;
+}
+
+.progress-circle circle:last-child{
+transition:stroke-dashoffset 1.2s ease;
+filter:drop-shadow(0 0 12px rgba(0,212,255,.8));
+}
+
+.progress-circle svg{
+overflow:visible;
+}
+
+.progress-circle{
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+}
+.stat-card{
+transition:all .35s ease;
+cursor:pointer;
+}
+
+.stat-card:hover{
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 0 25px rgba(0,212,255,.35);
+}
+
+.progress-circle{
+animation:zoomIn .8s ease;
+}
+
+@keyframes zoomIn{
+
+0%{
+transform:scale(.7);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+/* ---------- AI ASSISTANT ---------- */
+.ai-hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:28px 32px;
+    border-radius:24px;
+    background:linear-gradient(135deg,#172554,#0f3d5e);
+    border:1px solid rgba(0,212,255,.25);
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+}
+.ai-badge{
+    display:inline-flex;
+    gap:8px;
+    align-items:center;
+    padding:6px 11px;
+    border-radius:999px;
+    background:rgba(0,212,255,.12);
+    color:#67e8f9;
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+.ai-hero h2{font-weight:700;}
+.ai-hero p{color:#cbd5e1;}
+.ai-hero-icon{font-size:74px;color:#67e8f9;filter:drop-shadow(0 0 18px rgba(103,232,249,.3));}
+.ai-chat-card{min-height:570px;}
+.ai-messages{height:410px;overflow-y:auto;padding:4px 5px;}
+.ai-message{display:flex;gap:10px;margin-bottom:16px;align-items:flex-start;}
+.ai-message.user{flex-direction:row-reverse;}
+.ai-avatar{width:38px;height:38px;min-width:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#0ea5e9;color:white;}
+.ai-message.user .ai-avatar{background:#334155;}
+.ai-bubble{max-width:78%;padding:12px 15px;border-radius:16px;background:#0f172a;color:#e2e8f0;line-height:1.55;white-space:pre-wrap;}
+.ai-message.user .ai-bubble{background:#075985;color:white;}
+.ai-input-group .form-control{background:#0f172a;border:1px solid #334155;color:#fff;}
+.ai-input-group .form-control:focus{background:#0f172a;color:#fff;border-color:#00d4ff;box-shadow:0 0 0 .2rem rgba(0,212,255,.12);}
+.quick-prompt{border-color:#334155;color:#cbd5e1;}
+.quick-prompt:hover{color:#fff;border-color:#00d4ff;background:#0f3b4f;}
+@media(max-width:768px){.ai-hero{padding:22px;}.ai-hero-icon{font-size:50px;}.ai-bubble{max-width:84%;}}
