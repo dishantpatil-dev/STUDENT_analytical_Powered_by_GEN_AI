@@ -76,7 +76,7 @@ Actionable Academic Insights
 5. Start Apache/MySQL.
 6. Open the application through your local PHP server.
 
-Never commit real API keys or database credentials.
+Never commit real API keys or database credentials. Keep AI-provider credentials in server-side environment configuration, handle quota/API failures gracefully, and avoid exposing secrets in browser code or logs.
 
 ## 🧩 Architecture
 
